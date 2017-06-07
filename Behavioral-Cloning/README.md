@@ -11,12 +11,12 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-####1. All required files are included and can be used to run the simulator in autonomous mode
+#### 1. All required files are included and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 
@@ -24,19 +24,19 @@ My project includes the following files:
 * **drive.py** - for driving the car in autonomous mode
 * **model.h5** - containing a trained convolution neural network 
 
-####2. Functional code
+#### 2. Functional code
 Using the [Udacity simulator](https://github.com/udacity/self-driving-car-sim) and my drive.py file, the car can be driven autonomously around the track by executing 
 ```
 python drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The **model.py** file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 My model consists of the following layers and was inspired by NVIDIA's model from [here](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/):
 
@@ -90,17 +90,17 @@ _________________________________________________________________
 The model uses a combination of 2d convolutional (Conv2D) and fully connected (Dense) layers. Batch normalization and dropout (with probability of 50%) are applied at the different stage to allow network converge faster and avoid overfitting.
 The model includes RELU layers for the first 6 convolutional layers to introduce nonlinearity. 
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 As already mentioned the model contains dropout layers in order to reduce overfitting. 
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. The video record record is present **run1.mp4**
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually.
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
 
@@ -108,9 +108,9 @@ Also the recording was made on the different tracks to make the dataset more rep
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to change the model presented by NVIDIA's [here](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/):
 
@@ -127,7 +127,7 @@ Inspired by their model which looks as following:
 
 and not wanting to replicate exact structure the network that is explained in next section was derived.
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 Model architecture
 
@@ -186,7 +186,7 @@ The final step was to run the simulator to see how well the car was driving arou
 
 Further some more data was gathered for recovering the car from the side of the road and model was retrained again. Car was placed at the sides of the road few times and could recover succesfully.
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 

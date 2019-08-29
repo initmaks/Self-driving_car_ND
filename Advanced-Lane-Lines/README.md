@@ -1,4 +1,4 @@
-## Advance line derection
+## Advance line detection
 
 ![GIF](misc/drive.gif)
 
